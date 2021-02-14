@@ -22,4 +22,23 @@
 // console.log(circ('hello')); //does not make sense. Logs "NaN" to the console
 // console.log(circ(7.5)); // alows us to type check be fore compiling our code.
 // arrays:
+// let names = ['luigi', 'mario', 'yoshi'];
+// names.push('toad'); // fine
+// names.push(3); // does not work, you can only add the variable types used while initializing the array
+// let mixed = ['ken', 4, 'chun-li', 8, true];
+// this array can contain strings, numbers and booleans
 // objects:
+var ninja = {
+    name: 'mario',
+    belt: 'black',
+    age: 30
+};
+ninja.age = 40; // works fine
+ninja.name = 'ryu'; // fine
+// ninja.age = '30'; // does NOT work, cannot change the type of age to string
+// ninja.skills = ['fighting', 'sneaking']; // can NOT add new properties
+ninja = {
+    name: 'yoshi',
+    belt: 'orange',
+    age: 40
+};
