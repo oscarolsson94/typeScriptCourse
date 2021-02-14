@@ -119,3 +119,35 @@
 // last step: to avoid stuff outside of /src-folder to be compiled:
 // ,"include":["src"] before the closing of the object in tsconfig.json
 
+// Functions ------------------------
+
+// let greet: Function; // greet can only be a function
+
+// greet = () => {
+//     console.log('Hello, world');
+// }
+
+// Use one of the following if you want an optional parameter in your function:
+// Put your optional parameters at the end
+
+// const add = (a:number, b:number, c?: number|string) => { // c is now an OPTIONAL parameter (cus of the "?") that can be either of type number or string, defaults to undefined
+//     console.log(a + b);
+// }
+
+// const add = (a:number, b:number, c: number|string = 10) => { // c is now an OPTIONAL parameter that defaults to 10.
+//     console.log(a + b);
+// }
+
+// add(5, 10);
+
+// const minus = (a: number, b: number) => {
+//     return a - b;
+// }
+
+// let result = minus(10, 7); // result will be a number, assigned by the return statement from the function
+
+// const minus = (a: number, b: number): number => { // here we manuallly force the return type to be a number
+//     return a - b;
+// }
+
+// Type Aliases -----------------------------------------------

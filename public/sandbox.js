@@ -1,3 +1,4 @@
+"use strict";
 // const character = 'superman';
 // console.log(character);
 // const inputs = document.querySelectorAll('input'); //grabs all input tags
@@ -61,11 +62,43 @@
 // }
 // ninjaTwo = {name:'mario', age:20, beltColour:'black', skills:[]} // does NOT work, can't add "skills"-property.
 // dynamic types  -----------------
-var age; // can later be changed to any other type
-age = 25; // works
-age = 'hello'; // also works
-var mixed = [];
-mixed.push(5);
-mixed.push('mario');
-mixed.push(false); // also fine
+// let age: any; // can later be changed to any other type
+// age = 25; // works
+// age = 'hello'; // also works
+// let mixed: any[] = [];
+// mixed.push(5);
+// mixed.push('mario');
+// mixed.push(false); // also fine
+// let ninja: { name: any, age: any }; // must be an object with name and age properties, but the properties can have any types.
+// ninja = { name: 'yoshi', age: 25 };
 // should not really be used in typeScript, defeats the purpose of the language.
+// How to setup dev environment ---------------------------------
+// make public-folder for html/css/js files. Make src-folder for other stuff, ex typeScript file
+// tsc --init             -> gives tsconfig.json
+// un-comment "rootDir": "./" and change it to: "rootDir": "./src"
+// un-comment "outDir": "./" and change it to: "outDir": "./public"
+// tsc -w            -> will now watch ALL the files in the /src-file
+// last step: to avoid stuff outside of /src-folder to be compiled:
+// ,"include":["src"] before the closing of the object in tsconfig.json
+// Functions ------------------------
+// let greet: Function; // greet can only be a function
+// greet = () => {
+//     console.log('Hello, world');
+// }
+// Use one of the following if you want an optional parameter in your function:
+// Put your optional parameters at the end
+// const add = (a:number, b:number, c?: number|string) => { // c is now an OPTIONAL parameter (cus of the "?") that can be either of type number or string, defaults to undefined
+//     console.log(a + b);
+// }
+// const add = (a:number, b:number, c: number|string = 10) => { // c is now an OPTIONAL parameter that defaults to 10.
+//     console.log(a + b);
+// }
+// add(5, 10);
+// const minus = (a: number, b: number) => {
+//     return a - b;
+// }
+// let result = minus(10, 7); // result will be a number, assigned by the return statement from the function
+// const minus = (a: number, b: number): number => { // here we manuallly force the return type to be a number
+//     return a - b;
+// }
+// Type Aliases -----------------------------------------------
