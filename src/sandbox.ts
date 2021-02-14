@@ -161,3 +161,11 @@
 // }
 
 // Function signatures
+// let greet: Function;
+
+// example 1
+let greet: (a: string, b: string) => void; // the variable can hold a function which takes in 2 string parameters and returns void.
+greet = (name: string, greeting: string) => { //example 
+    console.log(`${name} says ${greeting}`);
+}
+// example 2

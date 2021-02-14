@@ -108,3 +108,10 @@
 //     console.log(`${user.name} says hello`)
 // }
 // Function signatures
+// let greet: Function;
+// example 1
+var greet; // the variable can hold a function which takes in 2 string parameters and returns void.
+greet = function (name, greeting) {
+    console.log(name + " says " + greeting);
+};
+// example 2
