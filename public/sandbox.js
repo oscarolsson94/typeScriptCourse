@@ -102,3 +102,8 @@
 //     return a - b;
 // }
 // Type Aliases -----------------------------------------------
+// type StringOrNum = string | number;
+// type userStringId = { name: string, uid: StringOrNum }
+// const greet = (user: userStringId) => {
+//     console.log(`${user.name} says hello`)
+// }
