@@ -18,7 +18,7 @@
 // for automatic compilation on save:
 // tsc sandbox.ts -w         <----------- terminal
 
-// Type Basics:
+// Type Basics: --------------------------------------------
 // let character = 'mario';
 // let age = 30;
 // let isBlackBelt = false;
@@ -32,7 +32,7 @@
 // console.log(circ('hello')); //does not make sense. Logs "NaN" to the console
 // console.log(circ(7.5)); // alows us to type check be fore compiling our code.
 
-// arrays: -----------------
+// arrays: -------------------------------------------------
 // let names = ['luigi', 'mario', 'yoshi'];
 
 // names.push('toad'); // fine
@@ -41,7 +41,7 @@
 // let mixed = ['ken', 4, 'chun-li', 8, true];
 // this array can contain strings, numbers and booleans
 
-// objects: -----------------
+// objects: ------------------------------------------------
 // let ninja = {
 //     name: 'mario',
 //     belt: 'black',
@@ -62,7 +62,7 @@
 
 // }
 
-// explicit types -----------------
+// explicit types ------------------------------------------------------------------------
 // let character: string; // initialize a variable but dont assign it a value
 // let age: number;
 // let isLoggedIn: boolean;
@@ -87,7 +87,7 @@
 
 // ninjaTwo = {name:'mario', age:20, beltColour:'black', skills:[]} // does NOT work, can't add "skills"-property.
 
-// dynamic types  -----------------
+// dynamic types  ---------------------------------------------------------------------------------
 // let age: any; // can later be changed to any other type
 
 // age = 25; // works
@@ -104,7 +104,7 @@
 
 // should not really be used in typeScript, defeats the purpose of the language.
 
-// How to setup dev environment ---------------------------------
+// How to setup dev environment --------------------------------------------------------------------
 
 // make public-folder for html/css/js files. Make src-folder for other stuff, ex typeScript file
 
@@ -119,7 +119,7 @@
 // last step: to avoid stuff outside of /src-folder to be compiled:
 // ,"include":["src"] before the closing of the object in tsconfig.json
 
-// Functions ------------------------
+// Functions -----------------------------------------------------------------------------
 
 // let greet: Function; // greet can only be a function
 
@@ -150,7 +150,7 @@
 //     return a - b;
 // }
 
-// Type Aliases -----------------------------------------------
+// Type Aliases ----------------------------------------------------------------------------------
 
 // type StringOrNum = string | number;
 
@@ -160,3 +160,4 @@
 //     console.log(`${user.name} says hello`)
 // }
 
+// Function signatures
