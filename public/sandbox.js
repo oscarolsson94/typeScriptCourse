@@ -109,23 +109,23 @@
 // }
 // Function signatures
 // let greet: Function;
-// example 1
-var greet; // the variable can hold a function which takes in 2 string parameters and returns void.
-greet = function (name, greeting) {
-    console.log(name + " says " + greeting);
-};
-// example 2
-var calc;
-calc = function (numOne, numTwo, action) {
-    if (action === 'add') {
-        return numOne + numTwo; //in both cases we are returning a number
-    }
-    else {
-        return numOne - numTwo;
-    }
-};
-// example 3
-var logDetails;
-logDetails = function (ninja) {
-    console.log(ninja.name + " is " + ninja.age + " years old");
-};
+// // example 1
+// let greet: (a: string, b: string) => void; // the variable can hold a function which takes in 2 string parameters and returns void.
+// greet = (name: string, greeting: string) => { //example 
+//     console.log(`${name} says ${greeting}`);
+// }
+// // example 2
+// let calc: (a: number, b: number, c: string) => number;
+// calc = (numOne: number, numTwo: number, action: string) => {
+//     if (action === 'add') {
+//         return numOne + numTwo; //in both cases we are returning a number
+//     } else {
+//         return numOne - numTwo;
+//     }
+// }
+// // example 3
+// let logDetails: (obj: { name: string, age: number }) => void;
+// type person = { name: string, age: number }; // using types
+// logDetails = (ninja: person) => {
+//     console.log(`${ninja.name} is ${ninja.age} years old`);
+// }
