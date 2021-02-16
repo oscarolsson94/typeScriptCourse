@@ -10,35 +10,43 @@
 // const form = document.querySelector('.new-item-form') as HTMLFormElement;  //type cast it into a Form-element
 
 // classes -----------------------------------
-class Invoice{
+// class Invoice{
 
-    client: string;
-    details: string;
-    amount: number;
+    // client: string; // can be private, public and readonly
+    // details: string;
+    // amount: number;
 
-    constructor(c:string, d: string, a: number) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
-    }
+    // constructor(c:string, d: string, a: number) {
+    //     this.client = c;
+    //     this.details = d;
+    //     this.amount = a;
+    // }
 
-    format() {
-        return `${this.client} owes $${this.amount} for ${this.details}`;
-    }
-}
+// ----->
+//     constructor( // declare and assign in one step, inside the constructor parantesis
+//         readonly client: string, // to do this you must use access modifiers
+//         private details: string,
+//         public amount:number
+//     ){}
 
-const invOne = new Invoice('mario', 'work on the mario website', 250);
-const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
+//     format() {
+//         return `${this.client} owes $${this.amount} for ${this.details}`;
+//     }
+// }
 
-let invoices: Invoice[] = []; // only allowing Invoice objects in the array
+// const invOne = new Invoice('mario', 'work on the mario website', 250);
+// const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
 
-invoices.push(invOne);
-invoices.push(invTwo);
+// let invoices: Invoice[] = []; // only allowing Invoice objects in the array
 
-console.log(invoices);
+// invoices.push(invOne);
+// invoices.push(invTwo);
 
-invOne.client = 'yoshi';
-invTwo.amount = 400; // all class properties are public by default. We can therefore change their values if we want
+// console.log(invoices);
+
+// invoices.forEach(invoice => {
+//     console.log(invoice.client, invoice.amount, invoice.format());
+// });
 
 
 // // inputs --------------------------

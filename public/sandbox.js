@@ -137,14 +137,20 @@
 // const form = document.querySelector('.new-item-form') as HTMLFormElement;  //type cast it into a Form-element
 // classes -----------------------------------
 // class Invoice{
-//     client: string;
-//     details: string;
-//     amount: number;
-//     constructor(c:string, d: string, a: number) {
-//         this.client = c;
-//         this.details = d;
-//         this.amount = a;
-//     }
+// client: string; // can be private, public and readonly
+// details: string;
+// amount: number;
+// constructor(c:string, d: string, a: number) {
+//     this.client = c;
+//     this.details = d;
+//     this.amount = a;
+// }
+// ----->
+//     constructor( // declare and assign in one step, inside the constructor parantesis
+//         readonly client: string, // to do this you must use access modifiers
+//         private details: string,
+//         public amount:number
+//     ){}
 //     format() {
 //         return `${this.client} owes $${this.amount} for ${this.details}`;
 //     }
@@ -155,8 +161,9 @@
 // invoices.push(invOne);
 // invoices.push(invTwo);
 // console.log(invoices);
-// invOne.client = 'yoshi';
-// invTwo.amount = 400; // all class properties are public by default. We can therefore change their values if we want
+// invoices.forEach(invoice => {
+//     console.log(invoice.client, invoice.amount, invoice.format());
+// });
 // // inputs --------------------------
 // const type = document.querySelector('#type')! as HTMLSelectElement;
 // const tofrom = document.querySelector('#tofrom')! as HTMLInputElement;
