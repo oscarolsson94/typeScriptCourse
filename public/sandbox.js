@@ -178,3 +178,10 @@
 //         amount.valueAsNumber // grab the value as a number instead of a string
 //     )
 // })
+// To use Modules -----------------------------------------------
+// in tsconfig.json - change to: "target": "es6",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+//                               "module": "es2015"
+// add: type="module" to the script tag in html that connects your js-file.
+// export from one file: "export class Invoice"
+// import from other file: "import { Invoice } from './classes/Invoice.js'"
+// Always use .js-extension even when importing in typescript
