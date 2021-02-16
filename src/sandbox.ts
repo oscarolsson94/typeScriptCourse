@@ -267,32 +267,32 @@
 
 // Interfaces ---------------------------------------------------------
 
-interface IsPerson{
-    name: string;
-    age: number;
-    speak(a: string): void;
-    spend(a: number): number;
-}
+// interface IsPerson{
+//     name: string;
+//     age: number;
+//     speak(a: string): void;
+//     spend(a: number): number;
+// }
 
-const me: IsPerson = { // an instance of the interface must have the same properties and methods
-                       // as stated in the interface. The properties could have different values,
-                       // and the methods could do different things but have to return the same type.
-    name:'oscar',
-    age: 26,
-    speak(text: string): void{
-        console.log(text);
-    },
-    spend(amount: number): number{
-        console.log('I spent', amount);
-        return amount;
-    }    
-}
+// const me: IsPerson = { // an instance of the interface must have the same properties and methods
+//                        // as stated in the interface. The properties could have different values,
+//                        // and the methods could do different things but have to return the same type.
+//     name:'oscar',
+//     age: 26,
+//     speak(text: string): void{
+//         console.log(text);
+//     },
+//     spend(amount: number): number{
+//         console.log('I spent', amount);
+//         return amount;
+//     }    
+// }
 
-let someone: IsPerson; // this will force the variable "someone" to comply to the interface IsPerson in the future
+// let someone: IsPerson; // this will force the variable "someone" to comply to the interface IsPerson in the future
 
-const greetPerson = (person: IsPerson) => { // this method can only take in an object that complies to the IsPerson interface
-    console.log('hello ', person.name);
-}
+// const greetPerson = (person: IsPerson) => { // this method can only take in an object that complies to the IsPerson interface
+//     console.log('hello ', person.name);
+// }
 
-greetPerson(me);
+// greetPerson(me);
         
