@@ -1,3 +1,5 @@
+// DOM ----------------------------------------
+
 // const anchor = document.querySelector('a')!; //<---- add ! if you are sure there is an <a>-tag in the DOM
 
 // console.log(anchor.href) // typeScript doesnt know if there is an <a>-tag in the dom or not
@@ -27,6 +29,17 @@ class Invoice{
 
 const invOne = new Invoice('mario', 'work on the mario website', 250);
 const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
+
+let invoices: Invoice[] = []; // only allowing Invoice objects in the array
+
+invoices.push(invOne);
+invoices.push(invTwo);
+
+console.log(invoices);
+
+invOne.client = 'yoshi';
+invTwo.amount = 400; // all class properties are public by default. We can therefore change their values if we want
+
 
 // // inputs --------------------------
 // const type = document.querySelector('#type')! as HTMLSelectElement;

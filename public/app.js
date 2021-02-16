@@ -1,4 +1,5 @@
 "use strict";
+// DOM ----------------------------------------
 // const anchor = document.querySelector('a')!; //<---- add ! if you are sure there is an <a>-tag in the DOM
 // console.log(anchor.href) // typeScript doesnt know if there is an <a>-tag in the dom or not
 // const form = document.querySelector('form')!; // typescript knows what kind of element it is, and what methods it has available
@@ -18,6 +19,12 @@ var Invoice = /** @class */ (function () {
 }());
 var invOne = new Invoice('mario', 'work on the mario website', 250);
 var invTwo = new Invoice('luigi', 'work on the luigi website', 300);
+var invoices = []; // only allowing Invoice objects in the array
+invoices.push(invOne);
+invoices.push(invTwo);
+console.log(invoices);
+invOne.client = 'yoshi';
+invTwo.amount = 400; // all class properties are public by default. We can therefore change their values if we want
 // // inputs --------------------------
 // const type = document.querySelector('#type')! as HTMLSelectElement;
 // const tofrom = document.querySelector('#tofrom')! as HTMLInputElement;
